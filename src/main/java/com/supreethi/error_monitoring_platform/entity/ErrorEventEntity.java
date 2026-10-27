@@ -18,6 +18,23 @@ public class ErrorEventEntity {
     private String severity;
     @Column(nullable = false)
     private LocalDateTime createdAt;
+    @Column(name = "event_id", nullable = false, unique = true, length = 36)
+    private String eventId;
+
+    public String getEventId() {
+        return eventId;
+    }
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
+    }
+    public String getFingerprint() {
+        return fingerprint;
+    }
+    public void setFingerprint(String fingerprint) {
+        this.fingerprint = fingerprint;
+    }
+    @Column(length = 64)
+    private String fingerprint;
 
     public long getId() {
         return id;

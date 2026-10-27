@@ -15,6 +15,15 @@ public class ErrorEvent {
         message = "severity cannot be blank"
     ) 
     private String severity;
+    private String eventId;
+
+    public String getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(String eventId) {
+        this.eventId = eventId;
+    }
 
     public ErrorEvent() {
     }
